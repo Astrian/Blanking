@@ -19,4 +19,4 @@ For MWeb app：
 - 将应用了新主题的网站上传到服务器中。
 
 ### 更新记录
-参阅：
+参阅：[我的博客](https://astrianzheng.cn/blanking-theme.html)或 [GitHub Release 记录](https://github.com/Astrian/Blanking/releases)。
