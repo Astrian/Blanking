@@ -1,0 +1,35 @@
+<meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@AstrianZheng" />
+    <meta name="twitter:title" content="{{post.title}}" />
+    <meta name="twitter:description" content='{{ post.content }}' />
+    <meta name="twitter:image" content="https://cdn.astrianzheng.cn/special/favicon.png" />
+
+<div class="main">
+        <div class="container post">
+          <div class="row">
+          <div class="col-md-offset-1 col-md-2 articleMeta text-right xingothic-sc-w4">
+            <p><span id="postdate" class="postdate xingothic-sc-w7"></span><br><span id="postyear" class="postyear"></span> 年 <span id="postmonth" class="postmonth"></span> 月</p>
+            <script>
+              moment.locale('zh-cn');
+              var date = moment("{{post.date}}");
+              $("#postdate").html(date.format("D"));
+              $("#postyear").html(date.format("Y"));
+              $("#postmonth").html(date.format("M"));
+            </script>
+            <p>{% if post.cats.@count %}分类于{% /if %}{% for cat in post.cats %}<br><a href='{{ cat.url }}'>{{ cat.name }}</a>{% /for %}{% if post.cats.@count %}{% /if %}</p>
+          </div>
+          <div class="article col-md-8">
+            <div class="articleHead">
+              <h1 class="articleTitle xingothic-sc-w7">{{post.title}}</h1>
+            </div>
+            <div class="articleBody xingothic-sc-w4 text-justify text-justify">{{ post.content }}</div>
+            <div class="buyMeACoffee">
+              <a href='/buy-me-a-coffee.html'><button class="buyMeACoffee-Btn xingothic-sc-w4"><i class="fa fa-coffee" aria-hidden="true"></i> 为作者买一杯咖啡</button></a>
+            </div>
+            <div class="comment">
+              {{ commentAndShareCode }}
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>

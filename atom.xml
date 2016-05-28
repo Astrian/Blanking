@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <icon>https://cdn.astrianzheng.cn/special/favicon.png</icon>
+   <logo>https://cdn.astrianzheng.cn/special/favicon.png</logo>
+  <title><![CDATA[{{ siteName }}]]></title>
+  <link href="{{ siteURL }}atom.xml" rel="self"/>
+  <link href="{{ siteURL }}"/>
+  <updated>{{ lastBuildDate }}</updated>
+  <id>{{ siteURL }}</id>
+  <author>
+    <name><![CDATA[Astrian Zheng]]></name>
+    
+  </author>
+  <generator uri="http://www.coderforart.com/">CoderForArt</generator>
+
+  {% for p in posts %}
+  <entry>
+    <title type="html"><![CDATA[{{ p.title }}]]></title>
+    <link href="{{ siteURL }}{{ p.url }}?utm_source=rss"/>
+    <updated>{{ p.artDate }}</updated>
+    <id>{{ siteURL }}{{ p.url }}?utm_source=rss</id>
+    <content type="html"><![CDATA[{{ p.content }}<p>原文链接：<a href="{{ siteURL }}{{ p.url }}?utm_source=rsscontent">{{ p.title }}</a>，欢迎你<a href="{{ siteURL }}/buy-me-a-coffee.html">为作者买一杯咖啡</a>。</p>]]></content>
+  </entry>
+  {% /for %}
+</feed>

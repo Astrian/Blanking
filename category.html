@@ -1,0 +1,50 @@
+
+<meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@AstrianZheng" />
+    <meta name="twitter:title" content="{% if pageTitle.length %}{{ pageTitle }}{% else %}{{siteName}}{% /if %}" />
+    <meta name="twitter:description" content="Astrian Zheng 的个人博客。主要记录这个时代的科技洞见，偶尔会在这个糟糕的世界喂你一颗糖。" />
+    <meta name="twitter:image" content="https://cdn.astrianzheng.cn/special/favicon.png" />
+
+<script>
+  if("{{ pageTitle }}" == "{{ siteName }}"){
+    $('.navitem-index').removeClass('xingothic-sc-w4');
+    $('.navitem-index').addClass('xingothic-sc-w7');
+    $('.navitem-index').addClass('active');
+  }
+  var i=1;
+</script>
+
+{% for p in posts %}
+<div class="posts">
+        <div class="container post">
+          <div class="row">
+          <div class="col-md-offset-1 col-md-2 articleMeta text-right xingothic-sc-w4">
+            <p><script>document.write("<span id='postdate-"+i+"' class='postdate xingothic-sc-w7'></span><br><span id='postyear-"+i+"' class='postyear'></span> 年 <span id='postmonth-"+i+"' class='postmonth'></span> 月")</script></p>
+            <script>
+              moment.locale('zh-cn');
+              var date = moment("{{p.date}}");
+              $("#postdate-"+i).html(date.format("D"));
+              $("#postyear-"+i).html(date.format("Y"));
+              $("#postmonth-"+i).html(date.format("M"));
+            </script>
+            <p>{% if p.cats.@count %}分类于{% /if %}{% for cat in p.cats %}<br><a href='{{ cat.url }}'>{{ cat.name }}</a>{% /for %}{% if p.cats.@count %}{% /if %}</p>
+          </div>
+          <div class="article col-md-8">
+            <div class="articleHead">
+              <a href="{{ p.url }}"><h1 class="articleTitle xingothic-sc-w7">{{p.title}}</h1></a>
+            </div>
+            <div class="articleBody xingothic-sc-w xingothic-sc-w4">{{ p.desContent }}<p class="readmore xingothic-sc-w4"><a href='{{ p.url }}'>阅读全文</a></p></div>
+          </div>
+        </div>
+        </div>
+        <div class='splash'>
+          <div class='splashline'></div>
+        </div>
+      </div>
+<script>i++;</script>
+ {% /for %} 
+<nav class="pagenavi xingothic-sc-w4">
+  {% if prevPageUrl.length %}<a href='{{ prevPageUrl }}'>上一页</a>{%/if%}
+  {% if prevPageUrl.length %}{% if nextPageUrl.length %}&nbsp;·&nbsp;{%/if%}{%/if%}
+  {% if nextPageUrl.length %}<a href='{{ nextPageUrl }}'>下一页</a>{%/if%}
+</nav>

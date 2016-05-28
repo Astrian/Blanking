@@ -1,0 +1,23 @@
+<script>
+  if("{{post.title}}" == "关于我"){
+    $('.navitem-aboutme').addClass('active');
+    $('.navitem-aboutme').removeClass('xingothic-sc-w4');
+    $('.navitem-aboutme').addClass('xingothic-sc-w7');
+  }
+</script>
+
+<div class="main">
+        <div class="container post">
+          <div class="row">
+          <div class="col-md-offset-1 col-md-2 backbutton text-right xingothic-sc-w4">
+            <a href="/" class="backbuttona"><span class="glyphicon glyphicon-chevron-left"></span> 返回主页</a>
+          </div>
+          <div class="article col-md-8">
+            <div class="articleHead">
+              <h1 class="articleTitle xingothic-sc-w7">{{post.title}}</h1>
+            </div>
+            <div class="articleBody xingothic-sc-w4 text-justify text-justify">{{ post.content }}</div>
+          </div>
+        </div>
+        </div>
+      </div>

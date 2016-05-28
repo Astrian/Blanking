@@ -1,0 +1,28 @@
+<script>
+  $('.navitem-archive').addClass('active');
+    $('.navitem-archive').removeClass('xingothic-sc-w4');
+    $('.navitem-archive').addClass('xingothic-sc-w7');
+</script>
+<div class="archive container body">
+  <div class="col-md-10 col-md-offset-1">
+    {% for p in posts %}
+      {% if p.year.length %} 
+        <h1 class="cat-year">{{ p.year }}</h1>
+			{% /if %}
+    <div class="archive-post">
+      {% if p.title.length %}
+        <a href='{{ p.url }}'><h3>{{ p.title }}</h3></a>
+      {% else %}
+        <a href='{{ p.url }}'><h3><i>一篇微博客</i></h3></a>
+      {% /if %}
+      <div class="archive-post-meta">
+						{% for cat in p.cats %}
+						    <a class='category' href='{{ cat.url }}'>{{ cat.name }}</a>
+						{% /for %} 
+            <br>
+        <time datetime="{{ p.dateGTM }}" itemprop="datePublished">{{ p.dateMonth }} {{ p.dateDay }}</time>
+        </div>
+    </div>
+    {% /for %}
+  </div>
+</div>
