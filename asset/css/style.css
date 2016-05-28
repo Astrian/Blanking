@@ -1,0 +1,224 @@
+@font-face
+{
+font-family: 'Bradley Hand Blod';
+src: url('https://cdn.astrianzheng.cn/special/Bradley%20Hand%20Bold.ttf');
+}
+
+body{
+  /*background-color: black;*/
+  /*font-family: "Roboto", "Noto Sans CJK SC", "Pingfang SC", "Microsoft Yahei";*/
+  min-height: 100%;
+  font-family: "xingothic-sc", "Noto Sans CJK SC", "Pingfang SC", "Microsoft Yahei";
+}
+
+.body{
+  min-height: 80%;
+}
+
+.nav-bar{
+  z-index: 100;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom-style:solid;
+  border-bottom-color: #f2f2f2;
+  border-bottom-width: 1px;
+  margin: 0;
+}
+
+.jumbotron{
+  margin: 0;
+  background-image: url(../imgs/background.png);
+  background-size: 100% auto;
+  height: 380px;
+}
+
+.websiteTitle{
+  padding-top: 10px;
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: right;
+}
+.pagenavitem{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  height:100%;
+  padding-bottom: 9px;
+  padding-top: 15px;
+  float: left;
+}
+.pagenavitem.active{
+  border-bottom-style: solid;
+  border-bottom-color: #454545;
+}
+.pagenavitem.active:hover{
+  border-bottom-style: solid;
+  border-bottom-color: #454545;
+}
+.pagenavitem{
+  color: #454545;
+  letter-spacing: 2px;
+}
+.pagenavitem:hover{
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.01);
+}
+.posts{
+  padding-top: 30px;
+}
+.articleHead{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 100px;
+}
+.articleMeta{
+  padding-top: 18px;
+  font-size: 12px;
+  color: gray;
+  letter-spacing: 2px;
+}
+.articleBody{
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.foot{
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color: #e8e8e8;
+}
+.footbox{
+  font-size: 12px;
+}
+.mottoContent{
+  font-family: 'Bradley Hand Blod';
+  font-size: 20px;
+  font-style: italic;
+  color: #3c3c3c;
+}
+.mottoMeta{
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+a,a:active,a:hover{
+  color: #333;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #8b8b8b;
+}
+.splash{
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.splashline{
+  width: 80px;
+  height: 3px;
+  background-color: #434343;
+  margin-left: auto;
+  margin-right: auto;
+}
+.readmore{
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.pageTitle{
+  text-align: center;
+}
+.pagenavi{
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+img,image{
+  max-width:100%;
+}
+.articleBody p{
+  padding-top: 10px;
+  text-align: justify
+}
+h2,h3,h4,h5,h6{
+  font-family: xingothic-sc;
+  font-weight: 600;
+}
+.jf-active *, .jf-inactive * { /*处理成功或失败，都以渐变显示*/
+      -webkit-transition: opacity 1s ease-out; 
+      -moz-transition: opacity 1s ease-out; 
+      -o-transition: opacity 1s ease-out; 
+      transition: opacity 1s ease-out; 
+}
+.menuButton{
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+
+div.photoComment{
+  text-align: center;
+  font-family: xingothic-sc;
+  font-weight: 400;
+  font-size: 12px;
+  font-style: italic;
+  color: gray;
+}
+
+h2,h3,h4,h5,h6{
+  padding-top: 20px;
+  font-weight: 700;
+}
+.buyMeACoffee{
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.buyMeACoffee a{
+  border: none;
+}
+.buyMeACoffee-Btn{
+  background-color: black;
+  color: white;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50px;
+}
+.postdate{
+  font-size: 30px;
+  color: rgb(51,51,51);
+}
+.backbutton{
+  padding-top: 23px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.backbuttona{
+  border: none;
+}
+.backbuttona:hover{
+   border:none;
+}
+.body{
+  min-height: 600px;
+}
+.comment-title{
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.how-many-comment{
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: gray;
+}
