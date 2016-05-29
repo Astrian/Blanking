@@ -40,5 +40,5 @@
           </div>
       </div>
     </div>
-    
+    <script>moment.locale('zh-cn');</script>
     <div class="body">

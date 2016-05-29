@@ -147,7 +147,7 @@ img,image{
   text-align: justify
 }
 h2,h3,h4,h5,h6{
-  font-family: xingothic-sc;
+  font-family: "xingothic-sc", "Noto Sans CJK SC", "Pingfang SC", "Microsoft Yahei";
   font-weight: 600;
 }
 .jf-active *, .jf-inactive * { /*处理成功或失败，都以渐变显示*/
@@ -221,4 +221,49 @@ h2,h3,h4,h5,h6{
   text-align: center;
   letter-spacing: 1px;
   color: gray;
+}
+.loggined{
+  color: gray;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.form-control-border{
+  width: 100%;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 10px;
+}
+.form-control-material{
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+.form-group-underline{
+  width: 100%;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.sendbutton{
+  outline: none;
+  border: none;
+  background-color: black;
+  padding-top: 8px;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  color: white;
+}
+.commentmetadata{
+  padding-top: 20px;
+}
+#commentform{
+  margin-bottom: 40px;
+}
+.commentprofile{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
